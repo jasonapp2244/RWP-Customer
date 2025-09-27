@@ -122,7 +122,7 @@ class VerifyOtpView extends StatelessWidget {
                                   UserModel? userModel = await FireStoreUtils.getUserProfile(value.user!.uid);
                                   if (userModel != null) {
                                     if (userModel.isActive == true) {
-                                      Get.offAll(const HomeView());
+                                      Get.offAll(() => const HomeView());
                                     } else {
                                       await FirebaseAuth.instance.signOut();
                                       ShowToastDialog.showToast("user_disable_admin_contact".tr);
@@ -183,7 +183,7 @@ class VerifyOtpView extends StatelessWidget {
                                     UserModel? userModel = await FireStoreUtils.getUserProfile(value.user!.uid);
                                     if (userModel != null) {
                                       if (userModel.isActive == true) {
-                                        Get.offAll(const HomeView());
+                                        Get.offAll(() => const HomeView());
                                       } else {
                                         await FirebaseAuth.instance.signOut();
                                         ShowToastDialog.showToast("user_disable_admin_contact".tr);

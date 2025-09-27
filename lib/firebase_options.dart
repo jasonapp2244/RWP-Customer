@@ -49,15 +49,14 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'YOUR_ANDROID_API_KEY',
-    appId: 'YOUR_ANDROID_APP_ID',
-    messagingSenderId: 'YOUR_ANDROID_MESSAGING_SENDER_ID',
-    projectId: 'YOUR_ANDROID_PROJECT_ID',
-    databaseURL: 'YOUR_ANDROID_DATABASE_URL',
-    storageBucket: 'YOUR_ANDROID_STORAGE_BUCKET',
-  );
-
+ static const FirebaseOptions android = FirebaseOptions(
+  apiKey: 'AIzaSyBfQxgmYDOCGd8LErM-d7wDSa-iih1do_U',
+  appId: '1:767364564337:android:add760306c0ed2b916a2d0', // Customer app
+  messagingSenderId: '767364564337',
+  projectId: 'mydrive-19d96',
+  databaseURL: 'https://mydrive-19d96-default-rtdb.firebaseio.com',
+  storageBucket: 'mydrive-19d96.firebasestorage.app',
+);
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'YOUR_IOS_API_KEY',
     appId: 'YOUR_IOS_APP_ID',

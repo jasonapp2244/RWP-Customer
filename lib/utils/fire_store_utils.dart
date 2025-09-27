@@ -241,71 +241,155 @@ class FireStoreUtils {
     return currencyModel;
   }
 
-  Future<void> getSettings() async {
-    await fireStore.collection(CollectionName.settings).doc("constant").get().then((value) {
-      if (value.exists) {
-        Constant.mapAPIKey = value.data()!["googleMapKey"];
-        Constant.senderId = value.data()!["notification_senderId"];
-        Constant.jsonFileURL = value.data()!["jsonFileURL"];
-        Constant.minimumAmountToWithdrawal = value.data()!["minimum_amount_withdraw"];
-        Constant.minimumAmountToDeposit = value.data()!["minimum_amount_deposit"];
-        Constant.appName = value.data()!["appName"];
-        Constant.appColor = value.data()!["appColor"];
-        Constant.termsAndConditions = value.data()!["termsAndConditions"];
-        Constant.privacyPolicy = value.data()!["privacyPolicy"];
-        Constant.aboutApp = value.data()!["aboutApp"];
-      }
-    });
-    await fireStore.collection(CollectionName.settings).doc("globalValue").get().then((value) {
-      if (value.exists) {
-        Constant.distanceType = value.data()!["distanceType"];
-        Constant.driverLocationUpdate = value.data()!["driverLocationUpdate"];
-        Constant.radius = value.data()!["radius"];
-      }
-    });
-    await fireStore.collection(CollectionName.settings).doc("canceling_reason").get().then((value) {
-      if (value.exists) {
-        Constant.cancellationReason = value.data()!["reasons"];
-      }
-    });
 
-    // await fireStore.collection(CollectionName.settings).doc("global").get().then((value) {
-    //   if (value.exists) {
-    //     Constant.termsAndConditions = value.data()!["termsAndConditions"];
-    //     Constant.privacyPolicy = value.data()!["privacyPolicy"];
-    //     // Constant.appVersion = value.data()!["appVersion"];
-    //   }
-    // });
+  // Modified By NOUMAN
 
-    await fireStore.collection(CollectionName.settings).doc("admin_commission").get().then((value) {
-      AdminCommission adminCommission = AdminCommission.fromJson(value.data()!);
-      if (adminCommission.active == true) {
-        Constant.adminCommission = adminCommission;
+
+Future<void> getSettings() async {
+  try {
+    // Document 1: constant
+    final constantDoc = await fireStore.collection(CollectionName.settings).doc("constant").get();
+    if (constantDoc.exists && constantDoc.data() != null) {
+      final data = constantDoc.data()!;
+      Constant.mapAPIKey = data["googleMapKey"] ?? Constant.mapAPIKey;
+      Constant.senderId = data["notification_senderId"] ?? Constant.senderId;
+      Constant.jsonFileURL = data["jsonFileURL"] ?? Constant.jsonFileURL;
+      Constant.minimumAmountToWithdrawal = data["minimum_amount_withdraw"] ?? Constant.minimumAmountToWithdrawal;
+      Constant.minimumAmountToDeposit = data["minimum_amount_deposit"] ?? Constant.minimumAmountToDeposit;
+      Constant.appName = data["appName"] ?? Constant.appName;
+      Constant.appColor = data["appColor"] ?? Constant.appColor;
+      Constant.termsAndConditions = data["termsAndConditions"] ?? Constant.termsAndConditions;
+      Constant.privacyPolicy = data["privacyPolicy"] ?? Constant.privacyPolicy;
+      Constant.aboutApp = data["aboutApp"] ?? Constant.aboutApp;
+    }
+
+    // Document 2: globalValue
+    final globalValueDoc = await fireStore.collection(CollectionName.settings).doc("globalValue").get();
+    if (globalValueDoc.exists && globalValueDoc.data() != null) {
+      final data = globalValueDoc.data()!;
+      Constant.distanceType = data["distanceType"] ?? Constant.distanceType;
+      Constant.driverLocationUpdate = data["driverLocationUpdate"] ?? Constant.driverLocationUpdate;
+      Constant.radius = data["radius"] ?? Constant.radius;
+    }
+
+    // Document 3: canceling_reason
+    final cancelReasonDoc = await fireStore.collection(CollectionName.settings).doc("canceling_reason").get();
+    if (cancelReasonDoc.exists && cancelReasonDoc.data() != null) {
+      final data = cancelReasonDoc.data()!;
+      Constant.cancellationReason = data["reasons"] ?? Constant.cancellationReason;
+    }
+
+    // Document 4: admin_commission
+    final adminCommissionDoc = await fireStore.collection(CollectionName.settings).doc("admin_commission").get();
+    if (adminCommissionDoc.exists && adminCommissionDoc.data() != null) {
+      try {
+        AdminCommission adminCommission = AdminCommission.fromJson(adminCommissionDoc.data()!);
+        if (adminCommission.active == true) {
+          Constant.adminCommission = adminCommission;
+        }
+      } catch (e) {
+        print("Error parsing admin commission: $e");
       }
-    });
-
-    // await fireStore.collection(CollectionName.settings).doc("referral").get().then((value) {
-    //   if (value.exists) {
-    //     Constant.referralAmount = value.data()!["referralAmount"];
-    //   }
-    // });
-    //
-    // await fireStore.collection(CollectionName.settings).doc("contact_us").get().then((value) {
-    //   if (value.exists) {
-    //     Constant.supportURL = value.data()!["supportURL"];
-    //   }
-    // });
+    }
+  } catch (e) {
+    print("Error fetching settings: $e");
   }
+}
 
-  Future<PaymentModel?> getPayment() async {
-    PaymentModel? paymentModel;
-    await fireStore.collection(CollectionName.settings).doc("payment").get().then((value) {
-      paymentModel = PaymentModel.fromJson(value.data()!);
-      Constant.paymentModel = PaymentModel.fromJson(value.data()!);
-    });
-    log("Payment Data : ${json.encode(paymentModel!.toJson().toString())}");
+
+
+  // Future<void> getSettings() async {
+  //   await fireStore.collection(CollectionName.settings).doc("constant").get().then((value) {
+  //     if (value.exists) {
+  //       Constant.mapAPIKey = value.data()!["googleMapKey"];
+  //       Constant.senderId = value.data()!["notification_senderId"];
+  //       Constant.jsonFileURL = value.data()!["jsonFileURL"];
+  //       Constant.minimumAmountToWithdrawal = value.data()!["minimum_amount_withdraw"];
+  //       Constant.minimumAmountToDeposit = value.data()!["minimum_amount_deposit"];
+  //       Constant.appName = value.data()!["appName"];
+  //       Constant.appColor = value.data()!["appColor"];
+  //       Constant.termsAndConditions = value.data()!["termsAndConditions"];
+  //       Constant.privacyPolicy = value.data()!["privacyPolicy"];
+  //       Constant.aboutApp = value.data()!["aboutApp"];
+  //     }
+  //   });
+  //   await fireStore.collection(CollectionName.settings).doc("globalValue").get().then((value) {
+  //     if (value.exists) {
+  //       Constant.distanceType = value.data()!["distanceType"];
+  //       Constant.driverLocationUpdate = value.data()!["driverLocationUpdate"];
+  //       Constant.radius = value.data()!["radius"];
+  //     }
+  //   });
+  //   await fireStore.collection(CollectionName.settings).doc("canceling_reason").get().then((value) {
+  //     if (value.exists) {
+  //       Constant.cancellationReason = value.data()!["reasons"];
+  //     }
+  //   });
+
+  //   // await fireStore.collection(CollectionName.settings).doc("global").get().then((value) {
+  //   //   if (value.exists) {
+  //   //     Constant.termsAndConditions = value.data()!["termsAndConditions"];
+  //   //     Constant.privacyPolicy = value.data()!["privacyPolicy"];
+  //   //     // Constant.appVersion = value.data()!["appVersion"];
+  //   //   }
+  //   // });
+
+  //   await fireStore.collection(CollectionName.settings).doc("admin_commission").get().then((value) {
+  //     AdminCommission adminCommission = AdminCommission.fromJson(value.data()!);
+  //     if (adminCommission.active == true) {
+  //       Constant.adminCommission = adminCommission;
+  //     }
+  //   });
+
+  //   // await fireStore.collection(CollectionName.settings).doc("referral").get().then((value) {
+  //   //   if (value.exists) {
+  //   //     Constant.referralAmount = value.data()!["referralAmount"];
+  //   //   }
+  //   // });
+  //   //
+  //   // await fireStore.collection(CollectionName.settings).doc("contact_us").get().then((value) {
+  //   //   if (value.exists) {
+  //   //     Constant.supportURL = value.data()!["supportURL"];
+  //   //   }
+  //   // });
+  // }
+
+
+
+
+// modified By Nouman 
+
+Future<PaymentModel?> getPayment() async {
+  try {
+    final document = await fireStore.collection(CollectionName.settings).doc("payment").get();
+    
+    if (!document.exists || document.data() == null) {
+      print("Payment document doesn't exist or has no data");
+      return null;
+    }
+    
+    final paymentData = document.data()!;
+    final paymentModel = PaymentModel.fromJson(paymentData);
+    Constant.paymentModel = paymentModel;
+    
+    log("Payment Data : ${json.encode(paymentModel.toJson())}");
     return paymentModel;
+  } catch (e) {
+    print("Error fetching payment data: $e");
+    return null;
   }
+}
+
+
+  // Future<PaymentModel?> getPayment() async {
+  //   PaymentModel? paymentModel;
+  //   await fireStore.collection(CollectionName.settings).doc("payment").get().then((value) {
+  //     paymentModel = PaymentModel.fromJson(value.data()!);
+  //     Constant.paymentModel = PaymentModel.fromJson(value.data()!);
+  //   });
+  //   log("Payment Data : ${json.encode(paymentModel!.toJson().toString())}");
+  //   return paymentModel;
+  // }
 
   static Future<VehicleTypeModel?> getVehicleTypeById(String vehicleId) async {
     try {

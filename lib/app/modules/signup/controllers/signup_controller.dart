@@ -57,7 +57,7 @@ class SignupController extends GetxController {
     final value = await FireStoreUtils.updateUser(userModelData);
     ShowToastDialog.closeLoader();
     if (value == true) {
-      Get.offAll(const HomeView());
+      Get.offAll(() => const HomeView());
     }
   }
 }

@@ -443,7 +443,7 @@ class DrawerView extends StatelessWidget {
                               positiveClick: () async {
                                 await FirebaseAuth.instance.signOut();
                                 Navigator.pop(context);
-                                Get.offAll(const LoginView());
+                                Get.offAll(() => const LoginView());
                               },
                               negativeClick: () {
                                 Navigator.pop(context);

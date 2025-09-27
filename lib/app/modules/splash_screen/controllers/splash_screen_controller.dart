@@ -34,12 +34,12 @@ class SplashScreenController extends GetxController {
       if (isLogin == true) {
         bool permissionGiven = await Constant.isPermissionApplied();
         if(permissionGiven){
-          Get.offAll(const HomeView());
+          Get.offAll(() => const HomeView());
         }else{
-          Get.offAll(const PermissionView());
+          Get.offAll(() => const PermissionView());
         }
       } else {
-        Get.offAll(const LoginView());
+        Get.offAll(() => const LoginView());
       }
     }
   }

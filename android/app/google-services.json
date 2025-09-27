@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "767364564337",
+    "firebase_url": "https://mydrive-19d96-default-rtdb.firebaseio.com",
     "project_id": "mydrive-19d96",
     "storage_bucket": "mydrive-19d96.firebasestorage.app"
   },
