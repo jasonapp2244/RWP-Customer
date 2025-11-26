@@ -111,7 +111,7 @@ class LoginView extends StatelessWidget {
                             size: const Size(200, 45),
                             title: "Send OTP".tr,
                             buttonColor: AppThemData.primary500,
-                            buttonTextColor: AppThemData.black,
+                            buttonTextColor: AppThemData.white,
                             onTap: () {
                               if (controller.formKey.value.currentState!.validate()) {
                                 controller.sendCode();

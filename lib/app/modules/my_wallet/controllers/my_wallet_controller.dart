@@ -282,7 +282,7 @@ class MyWalletController extends GetxController {
   //   FlutterPaypalNative.isDebugMode = paymentModel.value.paypal!.isSandbox == true ? true : false;
   //
   //   await _flutterPaypalNativePlugin.init(
-  //     returnUrl: "com.mydriver.customer://paypalpay",
+  //     returnUrl: "com.craftech.rwpcustomer://paypalpay",
   //     clientID: paymentModel.value.paypal!.paypalClient.toString(),
   //     payPalEnvironment: paymentModel.value.paypal!.isSandbox == true ? FPayPalEnvironment.sandbox : FPayPalEnvironment.live,
   //     currencyCode: FPayPalCurrencyCode.usd,

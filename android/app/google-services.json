@@ -1,42 +1,41 @@
 {
   "project_info": {
-    "project_number": "767364564337",
-    "firebase_url": "https://mydrive-19d96-default-rtdb.firebaseio.com",
-    "project_id": "mydrive-19d96",
-    "storage_bucket": "mydrive-19d96.firebasestorage.app"
+    "project_number": "339672413407",
+    "project_id": "ride-with-purpose",
+    "storage_bucket": "ride-with-purpose.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:767364564337:android:add760306c0ed2b916a2d0",
+        "mobilesdk_app_id": "1:339672413407:android:568d74fb957429a436e56a",
         "android_client_info": {
-          "package_name": "com.mydriver.customer"
+          "package_name": "com.craftech.rwpcustomer"
         }
       },
       "oauth_client": [
         {
-          "client_id": "767364564337-243su1h13k6c16skn7sbffjucckj1ll3.apps.googleusercontent.com",
+          "client_id": "339672413407-gp501gkaubupmi6orub454ghp4jmfonr.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.mydriver.customer",
-            "certificate_hash": "b53cb455bd5af66f35a8c6a0fd476c611a7672f2"
+            "package_name": "com.craftech.rwpcustomer",
+            "certificate_hash": "a5a6b0dae483354db64d89a0bf9315cc2da7a993"
           }
         },
         {
-          "client_id": "767364564337-ol4nsif3ov94m4uhlm0ejmd8u2rfaacp.apps.googleusercontent.com",
+          "client_id": "339672413407-j93ng3peo3spvrlfa34qkld4r0aqn8la.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBfQxgmYDOCGd8LErM-d7wDSa-iih1do_U"
+          "current_key": "AIzaSyAnXU1RMJrc2WodsRxc0tj7DqFv_vNtL4I"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "767364564337-ol4nsif3ov94m4uhlm0ejmd8u2rfaacp.apps.googleusercontent.com",
+              "client_id": "339672413407-j93ng3peo3spvrlfa34qkld4r0aqn8la.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
@@ -45,35 +44,35 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:767364564337:android:70c295c0deb9ee4816a2d0",
+        "mobilesdk_app_id": "1:339672413407:android:244a9cd9f67e036236e56a",
         "android_client_info": {
-          "package_name": "com.mydriver.driver"
+          "package_name": "com.craftech.rwpdriver"
         }
       },
       "oauth_client": [
         {
-          "client_id": "767364564337-qbilc7q09lj976m0f3skrfkcaacutqkb.apps.googleusercontent.com",
+          "client_id": "339672413407-6vuuh10i3f2to5gsi84cevu66ml0kjts.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.mydriver.driver",
-            "certificate_hash": "b53cb455bd5af66f35a8c6a0fd476c611a7672f2"
+            "package_name": "com.craftech.rwpdriver",
+            "certificate_hash": "a5a6b0dae483354db64d89a0bf9315cc2da7a993"
           }
         },
         {
-          "client_id": "767364564337-ol4nsif3ov94m4uhlm0ejmd8u2rfaacp.apps.googleusercontent.com",
+          "client_id": "339672413407-j93ng3peo3spvrlfa34qkld4r0aqn8la.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBfQxgmYDOCGd8LErM-d7wDSa-iih1do_U"
+          "current_key": "AIzaSyAnXU1RMJrc2WodsRxc0tj7DqFv_vNtL4I"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "767364564337-ol4nsif3ov94m4uhlm0ejmd8u2rfaacp.apps.googleusercontent.com",
+              "client_id": "339672413407-j93ng3peo3spvrlfa34qkld4r0aqn8la.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

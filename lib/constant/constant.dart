@@ -56,7 +56,7 @@ class Constant {
 
   // User and app state
   static UserModel? userModel;
-  static String mapAPIKey = "";
+  static String mapAPIKey = "AIzaSyC7XE19210GGsrYz25coeKXrrtU2Vkthcc";
   static String senderId = "";
   static String jsonFileURL = "";
   static String radius = "10";

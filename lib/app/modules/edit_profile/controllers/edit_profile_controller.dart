@@ -13,7 +13,7 @@ import 'package:image_picker/image_picker.dart';
 
 class EditProfileController extends GetxController {
   RxString profileImage = "https://firebasestorage.googleapis.com/v0/b/mytaxi-a8627.appspot.com/o/constant_assets%2F59.png?alt=media&token=a0b1aebd-9c01-45f6-9569-240c4bc08e23".obs;
-  TextEditingController countryCodeController = TextEditingController(text: '+91');
+  TextEditingController countryCodeController = TextEditingController(text: '+1');
   TextEditingController phoneNumberController = TextEditingController();
   TextEditingController nameController = TextEditingController();
   TextEditingController emailController = TextEditingController();

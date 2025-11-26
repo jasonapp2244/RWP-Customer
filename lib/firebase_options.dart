@@ -49,14 +49,14 @@ class DefaultFirebaseOptions {
     }
   }
 
- static const FirebaseOptions android = FirebaseOptions(
-  apiKey: 'AIzaSyBfQxgmYDOCGd8LErM-d7wDSa-iih1do_U',
-  appId: '1:767364564337:android:add760306c0ed2b916a2d0', // Customer app
-  messagingSenderId: '767364564337',
-  projectId: 'mydrive-19d96',
-  databaseURL: 'https://mydrive-19d96-default-rtdb.firebaseio.com',
-  storageBucket: 'mydrive-19d96.firebasestorage.app',
-);
+  static const FirebaseOptions android = FirebaseOptions(
+    apiKey: 'AIzaSyAnXU1RMJrc2WodsRxc0tj7DqFv_vNtL4I',
+    appId: '1:339672413407:android:568d74fb957429a436e56a',
+    messagingSenderId: '339672413407',
+    projectId: 'ride-with-purpose',
+    storageBucket: 'ride-with-purpose.firebasestorage.app',
+  );
+
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'YOUR_IOS_API_KEY',
     appId: 'YOUR_IOS_APP_ID',
@@ -68,5 +68,4 @@ class DefaultFirebaseOptions {
     iosClientId: 'YOUR_IOS_CLIENT_ID',
     iosBundleId: 'YOUR_IOS_BUNDLE_ID',
   );
-
 }

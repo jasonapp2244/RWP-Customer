@@ -1,4 +1,4 @@
-package com.mydriver.customer
+package com.craftech.rwpcustomer
 
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.android.FlutterFragmentActivity

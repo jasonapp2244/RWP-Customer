@@ -30,9 +30,8 @@ class RecentSearchLocation {
   static Future<List<SelectedLocationModel>> getLocationFromHistory() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     List<String>? jsonList = prefs.getStringList(_key);
-    if (jsonList == null) return [];
     // Parse list
-    List<SelectedLocationModel> rawList = jsonList.map((jsonStr) {
+    List<SelectedLocationModel> rawList = jsonList!.map((jsonStr) {
       Map<String, dynamic> jsonMap = jsonDecode(jsonStr);
       return SelectedLocationModel.fromJson(jsonMap);
     }).toList();

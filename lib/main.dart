@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get.dart';
 import 'package:customer/app/modules/splash_screen/views/splash_screen_view.dart';
-import 'package:customer/firebase_options.dart';
 import 'package:customer/global_setting_controller.dart';
 import 'package:customer/services/localization_service.dart';
 import 'package:customer/theme/styles.dart';

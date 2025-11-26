@@ -94,7 +94,7 @@ class StatementView extends StatelessWidget {
                               onChanged: (String? searchType) {
                                 controller.selectedSearchType.value = searchType ?? "Name";
                               },
-                              value: controller.selectedSearchType.value,
+                              initialValue: controller.selectedSearchType.value,
                               items: controller.searchType.map<DropdownMenuItem<String>>((String value) {
                                 return DropdownMenuItem(
                                   value: value,
@@ -171,7 +171,7 @@ class StatementView extends StatelessWidget {
                                 debugPrint("Start: ${selectedRange.start.toIso8601String()}");
                                 debugPrint("End: ${selectedRange.end.toIso8601String()}");
                               },
-                              value: controller.selectedDateOption.value,
+                              initialValue: controller.selectedDateOption.value,
                               items: controller.dateOption.map<DropdownMenuItem<String>>((String value) {
                                 return DropdownMenuItem(
                                   value: value,
