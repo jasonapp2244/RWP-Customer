@@ -7,7 +7,8 @@ class RecentSearchLocation {
   static const String _key = 'recent_searches';
 
   /// Add a single CategoryHistoryModel to the existing list
-  static Future<void> addLocationInHistory(SelectedLocationModel newItem) async {
+  static Future<void> addLocationInHistory(
+      SelectedLocationModel newItem) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     // Load existing list
     List<String> jsonList = prefs.getStringList(_key) ?? [];
@@ -17,11 +18,13 @@ class RecentSearchLocation {
       return SelectedLocationModel.fromJson(jsonMap);
     }).toList();
     // Remove any existing item with the same slug
-    rawList.removeWhere((item) => item.getFullAddress() == newItem.getFullAddress());
+    rawList.removeWhere(
+        (item) => item.getFullAddress() == newItem.getFullAddress());
     // Add new item
     rawList.add(newItem);
     // Convert back to string list
-    List<String> updatedJsonList = rawList.map((item) => jsonEncode(item.toJson())).toList();
+    List<String> updatedJsonList =
+        rawList.map((item) => jsonEncode(item.toJson())).toList();
     // Save
     await prefs.setStringList(_key, updatedJsonList);
   }
@@ -31,10 +34,20 @@ class RecentSearchLocation {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     List<String>? jsonList = prefs.getStringList(_key);
     // Parse list
-    List<SelectedLocationModel> rawList = jsonList!.map((jsonStr) {
-      Map<String, dynamic> jsonMap = jsonDecode(jsonStr);
-      return SelectedLocationModel.fromJson(jsonMap);
-    }).toList();
+
+    // List<SelectedLocationModel> rawList = jsonList!.map((jsonStr) {
+    //   Map<String, dynamic> jsonMap = jsonDecode(jsonStr);
+    //   return SelectedLocationModel.fromJson(jsonMap);
+    // }).toList();
+
+    List<SelectedLocationModel> rawList = [];
+    if (jsonList != null) {
+      rawList = jsonList.map((jsonStr) {
+        Map<String, dynamic> jsonMap = jsonDecode(jsonStr);
+        return SelectedLocationModel.fromJson(jsonMap);
+      }).toList();
+    }
+
     // Remove duplicates by category ID
     final Map<String, SelectedLocationModel> uniqueMap = {};
     for (var item in rawList) {

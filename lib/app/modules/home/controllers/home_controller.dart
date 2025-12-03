@@ -36,6 +36,8 @@ class HomeController extends GetxController {
 
   RxInt suggestionView = 3.obs;
 
+
+
   @override
   void onInit() {
     getUserData();

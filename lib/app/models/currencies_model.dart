@@ -2,7 +2,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class CurrencyModel {
-  Timestamp? createdAt;
+  DateTime? createdAt;
   String? symbol;
   String? code;
   bool? active;
@@ -14,7 +14,17 @@ class CurrencyModel {
   CurrencyModel({this.createdAt, this.symbol, this.code, this.active, this.symbolAtRight, this.name, this.decimalDigits, this.id});
 
   CurrencyModel.fromJson(Map<String, dynamic> json) {
-    createdAt = json['createdAt'];
+    // createdAt = json['createdAt'];
+     // Fix for Firestore timestamp
+    if (json['createdAt'] != null) {
+      var ts = json['createdAt'];
+      if (ts is Timestamp) {
+        createdAt = ts.toDate();
+      } else if (ts is Map) {
+        // Sometimes Firestore returns Map for nested data
+        createdAt = DateTime.tryParse(ts['seconds'].toString());
+      }
+    }
     symbol = json['symbol'];
     code = json['code'];
     active = json['active'];

@@ -17,7 +17,11 @@ class StartIntercityView extends GetView<StartIntercityController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBarWithBorder(title: "", bgColor: AppThemData.primary500,isUnderlineShow: false,),
+      appBar: AppBarWithBorder(
+        title: "",
+        bgColor: AppThemData.primary500,
+        isUnderlineShow: false,
+      ),
       body: Container(
         width: Responsive.width(100, context),
         height: Responsive.height(100, context),
@@ -39,7 +43,7 @@ class StartIntercityView extends GetView<StartIntercityController> {
               ),
             ),
             Text(
-              'My Taxi Intercity'.tr,
+              'RWP Intercity'.tr,
               textAlign: TextAlign.center,
               style: GoogleFonts.inter(
                 color: AppThemData.grey950,
@@ -110,7 +114,8 @@ class StartIntercityView extends GetView<StartIntercityController> {
                   SizedBox(
                     width: 24,
                     height: 24,
-                    child: SvgPicture.asset("assets/icon/ic_intercity_three.svg"),
+                    child:
+                        SvgPicture.asset("assets/icon/ic_intercity_three.svg"),
                   ),
                   const SizedBox(width: 12),
                   Expanded(

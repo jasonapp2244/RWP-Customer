@@ -87,8 +87,10 @@ const Map<String, String> enUS = {
   "Reasons for Canceling Ride": "Reasons for Canceling Ride",
   "Cancel": "Cancel",
   "Continue": "Continue",
-  "Your ride is successfully cancelled.": "Your ride is successfully cancelled.",
-  "We hope to serve you better next time.": "We hope to serve you better next time.",
+  "Your ride is successfully cancelled.":
+      "Your ride is successfully cancelled.",
+  "We hope to serve you better next time.":
+      "We hope to serve you better next time.",
   "Back to Home": "Back to Home",
   "Something went wrong!": "Something went wrong!",
   "Type here...": "Type here...",
@@ -102,7 +104,8 @@ const Map<String, String> enUS = {
   "Sign Up": "Sign Up",
   "verify_OTP": "Verify OTP",
   "Verify Your Phone Number": "Verify Your Phone Number",
-  "Enter  6-digit code sent to your mobile number to complete verification.": "Enter  6-digit code sent to your mobile number to complete verification.",
+  "Enter  6-digit code sent to your mobile number to complete verification.":
+      "Enter  6-digit code sent to your mobile number to complete verification.",
   "Did’t Receive a code ?": "Did’t Receive a code ?",
   "Resend Code": "Resend Code",
   "Placed": "Placed",
@@ -167,9 +170,11 @@ const Map<String, String> enUS = {
   "Please Add person": "Please Add person",
   "Please Select Start Time": "Please Select Start Time",
   "Select Payment Methods": "Select Payment Methods",
-  "Please select both pickup and drop locations.": "Please select both pickup and drop locations.",
-  "My Taxi Intercity": "My Taxi Intercity",
-  "For long distance trip between select cities": "For long distance trip between select cities",
+  "Please select both pickup and drop locations.":
+      "Please select both pickup and drop locations.",
+  "RWP Intercity": "RWP Intercity",
+  "For long distance trip between select cities":
+      "For long distance trip between select cities",
   "Convenient and affordable rides": "Convenient and affordable rides",
   "Priority chat support post trip": "Priority chat support post trip",
   "Weight": "Weight",
@@ -191,16 +196,19 @@ const Map<String, String> enUS = {
   "No Available Bid List": "No Available Bid List",
   "Closed": "Closed",
   "Confirm Ride Request": "Confirm Ride Request",
-  "Are you sure you want to accept this ride request? Once confirmed, you will be directed to the next step to proceed with the ride.": "Are you sure you want to accept this ride request? Once confirmed, you will be directed to the next step to proceed with the ride.",
+  "Are you sure you want to accept this ride request? Once confirmed, you will be directed to the next step to proceed with the ride.":
+      "Are you sure you want to accept this ride request? Once confirmed, you will be directed to the next step to proceed with the ride.",
   "Ride accepted successfully!": "Ride accepted successfully!",
   "Price Details": "Price Details",
   "Payment successful": "Payment successful",
   "Parcel Ride Details": "Parcel Ride Details",
   "Cancel Bid": "Cancel Bid",
-  "Are you sure you want cancel this bid?": "Are you sure you want cancel this bid?",
+  "Are you sure you want cancel this bid?":
+      "Are you sure you want cancel this bid?",
   "No": "No",
   "Parcel Image": "Parcel Image",
   "Delete account": "Delete account",
-  "Your account will be deleted permanently. Your Data will not be Restored Again": "Your account will be deleted permanently. Your Data will not be Restored Again",
+  "Your account will be deleted permanently. Your Data will not be Restored Again":
+      "Your account will be deleted permanently. Your Data will not be Restored Again",
   "Account Deleted Successfully..": "Account Deleted Successfully..",
 };

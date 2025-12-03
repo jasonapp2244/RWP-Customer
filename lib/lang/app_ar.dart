@@ -38,7 +38,8 @@ const Map<String, String> lnAr = {
   "Your reliable partner for swift and convenient rides. Experience hassle-free transportation at your fingertips.":
       "شريكك الموثوق به لرحلات سريعة ومريحة. استمتع بالنقل بدون متاعب بنقرة واحدة.",
   "Fast and Reliable": "سريع وموثوق",
-  "MyTaxi ensures prompt and reliable rides, getting you to your destination with speed and efficiency.": "تضمن تاكسي بلدي رحلات سريعة وموثوقة، وتوصلك إلى وجهتك بسرعة وكفاءة.",
+  "MyTaxi ensures prompt and reliable rides, getting you to your destination with speed and efficiency.":
+      "تضمن تاكسي بلدي رحلات سريعة وموثوقة، وتوصلك إلى وجهتك بسرعة وكفاءة.",
   "Seamless User Experience": "تجربة مستخدم سلسة",
   "Enjoy a user-friendly interface, easy bookings, and secure payments with MyTaxi. Your journey, your way.":
       "استمتع بواجهة سهلة الاستخدام وحجوزات سهلة ومدفوعات آمنة مع تاكسي بلدي. رحلتك، طريقك.",
@@ -87,7 +88,8 @@ const Map<String, String> lnAr = {
   "Cancel": "إلغاء",
   "Continue": "تابع",
   "Your ride is successfully cancelled.": "تم إلغاء رحلتك بنجاح.",
-  "We hope to serve you better next time.": "نأمل أن نخدمك بشكل أفضل في المرة القادمة.",
+  "We hope to serve you better next time.":
+      "نأمل أن نخدمك بشكل أفضل في المرة القادمة.",
   "Back to Home": "العودة إلى الصفحة الرئيسية",
   "Something went wrong!": "حدث خطأ ما!",
   "Type here...": "اكتب هنا...",
@@ -101,7 +103,8 @@ const Map<String, String> lnAr = {
   "Sign Up": "سجل",
   "verify_OTP": "التحقق من OTP",
   "Verify Your Phone Number": "تحقق من رقم هاتفك",
-  "Enter  6-digit code sent to your mobile number to complete verification.": "أدخل الرمز المكون من 6 أرقام المرسل إلى رقم هاتفك لإكمال التحقق.",
+  "Enter  6-digit code sent to your mobile number to complete verification.":
+      "أدخل الرمز المكون من 6 أرقام المرسل إلى رقم هاتفك لإكمال التحقق.",
   "Did’t Receive a code ?": "لم تتلق رمزًا؟",
   "Resend Code": "إعادة إرسال الرمز",
   "Placed": "تم الوضع",
@@ -109,7 +112,8 @@ const Map<String, String> lnAr = {
   "Cancelled": "تم الإلغاء",
   "Pickup Point": "نقطة الاستلام",
   "No Rides Found": "لم يتم العثور على رحلات",
-  "Your ride history is currently empty. Start your journey with MyTaxi by booking your first ride now!": "سجل رحلتك فارغ حاليًا. ابدأ رحلتك مع تاكسي بلدي بحجز رحلتك الأولى الآن!",
+  "Your ride history is currently empty. Start your journey with MyTaxi by booking your first ride now!":
+      "سجل رحلتك فارغ حاليًا. ابدأ رحلتك مع تاكسي بلدي بحجز رحلتك الأولى الآن!",
   "Dropout Point": "نقطة الوصول",
   "Services": "الخدمات",
   "Light Mode": "وضع الضوء",
@@ -123,7 +127,6 @@ const Map<String, String> lnAr = {
   "required": "مطلوب",
   "We will arrived in": "سنصل خلال",
   "No Data available": "لا تتوافر بيانات",
-
   "Support": "يدعم",
   "Create Ticket": "إنشاء تذكرة",
   "Title": "عنوان",
@@ -165,9 +168,11 @@ const Map<String, String> lnAr = {
   "Please Add person": "يرجى إضافة شخص",
   "Please Select Start Time": "يرجى اختيار وقت البدء",
   "Select Payment Methods": "اختر طرق الدفع",
-  "Please select both pickup and drop locations.": "يرجى اختيار موقعي الالتقاط والتوصيل معًا.",
-  "My Taxi Intercity": "تاكسي بين المدن الخاص بي",
-  "For long distance trip between select cities": "لرحلات المسافات الطويلة بين المدن المختارة",
+  "Please select both pickup and drop locations.":
+      "يرجى اختيار موقعي الالتقاط والتوصيل معًا.",
+  "RWP Intercity": "تاكسي بين المدن الخاص بي",
+  "For long distance trip between select cities":
+      "لرحلات المسافات الطويلة بين المدن المختارة",
   "Convenient and affordable rides": "رحلات مريحة وبأسعار معقولة",
   "Priority chat support post trip": "دعم الدردشة ذو الأولوية بعد الرحلة",
   "Weight": "الوزن",
@@ -189,16 +194,19 @@ const Map<String, String> lnAr = {
   "No Available Bid List": "لا توجد قائمة عروض متاحة",
   "Closed": "مغلق",
   "Confirm Ride Request": "تأكيد طلب الرحلة",
-  "Are you sure you want to accept this ride request? Once confirmed, you will be directed to the next step to proceed with the ride.": "هل أنت متأكد أنك تريد قبول طلب الرحلة هذا؟ بمجرد التأكيد، سيتم توجيهك إلى الخطوة التالية لمتابعة الرحلة.",
+  "Are you sure you want to accept this ride request? Once confirmed, you will be directed to the next step to proceed with the ride.":
+      "هل أنت متأكد أنك تريد قبول طلب الرحلة هذا؟ بمجرد التأكيد، سيتم توجيهك إلى الخطوة التالية لمتابعة الرحلة.",
   "Ride accepted successfully!": "تم قبول الرحلة بنجاح!",
   "Price Details": "تفاصيل السعر",
   "Payment successful": "تم الدفع بنجاح",
   "Parcel Ride Details": "تفاصيل رحلة الطرد",
   "Cancel Bid": "إلغاء العرض",
-  "Are you sure you want cancel this bid?": "هل أنت متأكد أنك تريد إلغاء هذا العرض؟",
+  "Are you sure you want cancel this bid?":
+      "هل أنت متأكد أنك تريد إلغاء هذا العرض؟",
   "No": "لا",
   "Parcel Image": "صورة الطرد",
   "Delete account": "حذف الحساب",
-  "Your account will be deleted permanently. Your Data will not be Restored Again": "سيتم حذف حسابك نهائيا. لن تتم استعادة بياناتك مرة أخرى",
+  "Your account will be deleted permanently. Your Data will not be Restored Again":
+      "سيتم حذف حسابك نهائيا. لن تتم استعادة بياناتك مرة أخرى",
   "Account Deleted Successfully..": "تم حذف الحساب بنجاح..",
 };

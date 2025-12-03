@@ -168,7 +168,7 @@ const Map<String, String> hiIN = {
   "Please Select Start Time": "कृपया प्रारंभ समय चुनें",
   "Select Payment Methods": "भुगतान विधि चुनें",
   "Please select both pickup and drop locations.": "कृपया पिकअप और ड्रॉप स्थान दोनों चुनें।",
-  "My Taxi Intercity": "मेरा टैक्सी इंटरसिटी",
+  "RWP Intercity": "मेरा टैक्सी इंटरसिटी",
   "For long distance trip between select cities": "चयनित शहरों के बीच लंबी दूरी की यात्रा के लिए",
   "Convenient and affordable rides": "सुविधाजनक और किफायती सवारी",
   "Priority chat support post trip": "यात्रा के बाद प्राथमिकता चैट समर्थन",
