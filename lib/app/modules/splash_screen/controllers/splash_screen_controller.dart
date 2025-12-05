@@ -27,15 +27,16 @@ class SplashScreenController extends GetxController {
   void onClose() {}
 
   Future<void> redirectScreen() async {
-    if ((await Preferences.getBoolean(Preferences.isFinishOnBoardingKey)) == false) {
-      Get.offAll(const IntroScreenView());
+    if ((await Preferences.getBoolean(Preferences.isFinishOnBoardingKey)) ==
+        false) {
+      Get.offAll(() => const IntroScreenView());
     } else {
       bool isLogin = await FireStoreUtils.isLogin();
       if (isLogin == true) {
         bool permissionGiven = await Constant.isPermissionApplied();
-        if(permissionGiven){
+        if (permissionGiven) {
           Get.offAll(() => const HomeView());
-        }else{
+        } else {
           Get.offAll(() => const PermissionView());
         }
       } else {

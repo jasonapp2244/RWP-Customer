@@ -405,7 +405,7 @@ class ParcelRideDetailsController extends GetxController {
   //   FlutterPaypalNative.isDebugMode = paymentModel.value.paypal!.isSandbox == true ? true : false;
   //
   //   await _flutterPaypalNativePlugin.init(
-  //     returnUrl: "com.craftech.rwpcustomer://paypalpay",
+  //     returnUrl: "com.appscrub.rwpcustomer://paypalpay",
   //     clientID: paymentModel.value.paypal!.paypalClient.toString(),
   //     payPalEnvironment: paymentModel.value.paypal!.isSandbox == true ? FPayPalEnvironment.sandbox : FPayPalEnvironment.live,
   //     currencyCode: FPayPalCurrencyCode.usd,

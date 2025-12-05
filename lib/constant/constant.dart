@@ -53,7 +53,8 @@ class Constant {
   // Asset URLs
   static const String profileConstant =
       "https://firebasestorage.googleapis.com/v0/b/gocab-a8627.appspot.com/o/constant_assets%2F59.png?alt=media&token=a0b1aebd-9c01-45f6-9569-240c4bc08e23";
-
+  static const String defaultProfilePic =
+      "https://firebasestorage.googleapis.com/v0/b/mytaxi-a8627.appspot.com/o/constant_assets%2F59.png?alt=media&token=a0b1aebd-9c01-45f6-9569-240c4bc08e23";
   // User and app state
   static UserModel? userModel;
   static String mapAPIKey = "AIzaSyC7XE19210GGsrYz25coeKXrrtU2Vkthcc";
@@ -101,7 +102,8 @@ class Constant {
 
   static const String typeDriver = "driver";
   static const String typeCustomer = "customer";
-  static const _chars = 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789';
+  static const _chars =
+      'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789';
   static final math.Random _rnd = math.Random();
 
   // RxList<IntercityDocumentModel> intercityDocuments = <IntercityDocumentModel>[].obs;
@@ -109,12 +111,16 @@ class Constant {
   // Separate lists for each document type
   static RxList<VehicleTypeModel> cabTimeSlotList = <VehicleTypeModel>[].obs;
   // static RxList<TimeSlotsChargesModel> cabDocuments = <TimeSlotsChargesModel>[].obs;
-  static RxList<TimeSlotsChargesModel> parcelDocuments = <TimeSlotsChargesModel>[].obs;
-  static RxList<TimeSlotsChargesModel> intercitySharingDocuments = <TimeSlotsChargesModel>[].obs;
-  static RxList<TimeSlotsChargesModel> intercityPersonalDocuments = <TimeSlotsChargesModel>[].obs;
+  static RxList<TimeSlotsChargesModel> parcelDocuments =
+      <TimeSlotsChargesModel>[].obs;
+  static RxList<TimeSlotsChargesModel> intercitySharingDocuments =
+      <TimeSlotsChargesModel>[].obs;
+  static RxList<TimeSlotsChargesModel> intercityPersonalDocuments =
+      <TimeSlotsChargesModel>[].obs;
 
   static String getRandomString(int length) {
-    String randomString = String.fromCharCodes(Iterable.generate(length - 1, (_) => _chars.codeUnitAt(_rnd.nextInt(_chars.length))));
+    String randomString = String.fromCharCodes(Iterable.generate(
+        length - 1, (_) => _chars.codeUnitAt(_rnd.nextInt(_chars.length))));
     // print("Random String :- $randomString");
     int underScorePosition = _rnd.nextInt(length);
     // print("UnderScore Position :- $underScorePosition");
@@ -141,13 +147,16 @@ class Constant {
       if (taxModel.isFix == true) {
         taxAmount = double.parse(taxModel.value.toString());
       } else {
-        taxAmount = (double.parse(amount.toString()) * double.parse(taxModel.value!.toString())) / 100;
+        taxAmount = (double.parse(amount.toString()) *
+                double.parse(taxModel.value!.toString())) /
+            100;
       }
     }
     return taxAmount;
   }
 
-  static String calculateReview({required String? reviewCount, required String? reviewSum}) {
+  static String calculateReview(
+      {required String? reviewCount, required String? reviewSum}) {
     final double count = double.tryParse(reviewCount ?? "0") ?? 0;
     final double sum = double.tryParse(reviewSum ?? "0") ?? 0;
 
@@ -197,11 +206,23 @@ class Constant {
   }
 
   static Future<LanguageModel> getLanguage() async {
-    final String language = await Preferences.getString(Preferences.languageCodeKey);
+    final String language =
+        await Preferences.getString(Preferences.languageCodeKey);
     if (language.isEmpty) {
       await Preferences.setString(
-          Preferences.languageCodeKey, json.encode({"active": true, "code": "en", "id": "CcrGiUvJbPTXaU31s5l8", "name": "English"}));
-      return LanguageModel.fromJson({"active": true, "code": "en", "id": "CcrGiUvJbPTXaU31s5l8", "name": "English"});
+          Preferences.languageCodeKey,
+          json.encode({
+            "active": true,
+            "code": "en",
+            "id": "CcrGiUvJbPTXaU31s5l8",
+            "name": "English"
+          }));
+      return LanguageModel.fromJson({
+        "active": true,
+        "code": "en",
+        "id": "CcrGiUvJbPTXaU31s5l8",
+        "name": "English"
+      });
     }
     Map<String, dynamic> languageMap = jsonDecode(language);
     log(languageMap.toString());
@@ -229,7 +250,8 @@ class Constant {
   }
 
   bool hasValidUrl(String value) {
-    String pattern = r'(http|https)://[\w-]+(\.[\w-]+)+([\w.,@?^=%&amp;:/~+#-]*[\w@?^=%&amp;/~+#-])?';
+    String pattern =
+        r'(http|https)://[\w-]+(\.[\w-]+)+([\w.,@?^=%&amp;:/~+#-]*[\w@?^=%&amp;/~+#-])?';
     RegExp regExp = RegExp(pattern);
     if (value.isEmpty) {
       return false;
@@ -245,62 +267,85 @@ class Constant {
         iconColor: AppThemData.primary500,
         isDense: true,
         filled: true,
-        fillColor: themeChange.isDarkTheme() ? AppThemData.grey900 : AppThemData.grey50,
-        contentPadding: const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
+        fillColor: themeChange.isDarkTheme()
+            ? AppThemData.grey900
+            : AppThemData.grey50,
+        contentPadding:
+            const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
         disabledBorder: OutlineInputBorder(
           borderRadius: const BorderRadius.all(Radius.circular(100)),
           borderSide: BorderSide(
-            color: themeChange.isDarkTheme() ? AppThemData.grey900 : AppThemData.grey50,
+            color: themeChange.isDarkTheme()
+                ? AppThemData.grey900
+                : AppThemData.grey50,
           ),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: const BorderRadius.all(Radius.circular(100)),
           borderSide: BorderSide(
-            color: themeChange.isDarkTheme() ? AppThemData.grey900 : AppThemData.grey50,
+            color: themeChange.isDarkTheme()
+                ? AppThemData.grey900
+                : AppThemData.grey50,
           ),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: const BorderRadius.all(Radius.circular(100)),
           borderSide: BorderSide(
-            color: themeChange.isDarkTheme() ? AppThemData.grey900 : AppThemData.grey50,
+            color: themeChange.isDarkTheme()
+                ? AppThemData.grey900
+                : AppThemData.grey50,
           ),
         ),
         errorBorder: OutlineInputBorder(
           borderRadius: const BorderRadius.all(Radius.circular(100)),
           borderSide: BorderSide(
-            color: themeChange.isDarkTheme() ? AppThemData.grey900 : AppThemData.grey50,
+            color: themeChange.isDarkTheme()
+                ? AppThemData.grey900
+                : AppThemData.grey50,
           ),
         ),
         border: OutlineInputBorder(
           borderRadius: const BorderRadius.all(Radius.circular(100)),
           borderSide: BorderSide(
-            color: themeChange.isDarkTheme() ? AppThemData.grey900 : AppThemData.grey50,
+            color: themeChange.isDarkTheme()
+                ? AppThemData.grey900
+                : AppThemData.grey50,
           ),
         ),
         hintText: "Select Brand",
         hintStyle: TextStyle(
           fontSize: 16,
-          color: themeChange.isDarkTheme() ? AppThemData.grey25 : AppThemData.grey950,
+          color: themeChange.isDarkTheme()
+              ? AppThemData.grey25
+              : AppThemData.grey950,
           fontWeight: FontWeight.w500,
         ));
   }
 
-  static Future<String> uploadUserImageToFireStorage(File image, String filePath, String fileName) async {
-    Reference upload = FirebaseStorage.instance.ref().child('$filePath/$fileName');
+  static Future<String> uploadUserImageToFireStorage(
+      File image, String filePath, String fileName) async {
+    Reference upload =
+        FirebaseStorage.instance.ref().child('$filePath/$fileName');
     UploadTask uploadTask = upload.putFile(image);
-    var downloadUrl = await (await uploadTask.whenComplete(() {})).ref.getDownloadURL();
+    var downloadUrl =
+        await (await uploadTask.whenComplete(() {})).ref.getDownloadURL();
     return downloadUrl.toString();
   }
 
   static Future<List<String>> uploadSupportImage(List<String> images) async {
-    var imageUrls = await Future.wait(images.map(
-        (image) => uploadUserImageToFireStorage(File(image), "supportImages/${FireStoreUtils.getCurrentUid()}", File(image).path.split("/").last)));
+    var imageUrls = await Future.wait(images.map((image) =>
+        uploadUserImageToFireStorage(
+            File(image),
+            "supportImages/${FireStoreUtils.getCurrentUid()}",
+            File(image).path.split("/").last)));
     return imageUrls;
   }
 
-  static Future<String> uploadPic(PickedFile image, String fileName, String filePath, String mimeType) async {
+  static Future<String> uploadPic(PickedFile image, String fileName,
+      String filePath, String mimeType) async {
     UploadTask uploadTask;
-    Reference ref = FirebaseStorage.instance.ref().child(fileName).child(filePath);
+    Reference ref =
+        FirebaseStorage.instance.ref().child(fileName).child(filePath);
 
     uploadTask = ref.putData(
         await image.readAsBytes(),
@@ -359,7 +404,8 @@ class Constant {
         contentPadding: const EdgeInsets.all(12),
         insetPadding: const EdgeInsets.fromLTRB(16, 20, 16, 20),
         title: const Text('Permission Required'),
-        content: const Text('Location permission has been permanently denied. Please enable it in the app settings to continue.'),
+        content: const Text(
+            'Location permission has been permanently denied. Please enable it in the app settings to continue.'),
         actions: [
           TextButton(
             onPressed: () async {
@@ -379,7 +425,8 @@ class Constant {
     );
   }
 
-  Future<void> commonLaunchUrl(String url, {LaunchMode launchMode = LaunchMode.inAppWebView}) async {
+  Future<void> commonLaunchUrl(String url,
+      {LaunchMode launchMode = LaunchMode.inAppWebView}) async {
     await launchUrl(Uri.parse(url), mode: launchMode).catchError((e) {
       // toast('Invalid URL: $url');
       throw e;
@@ -389,7 +436,8 @@ class Constant {
   void launchCall(String? url) {
     if (url!.validate().isNotEmpty) {
       if (Platform.isIOS) {
-        commonLaunchUrl('tel://$url', launchMode: LaunchMode.externalApplication);
+        commonLaunchUrl('tel://$url',
+            launchMode: LaunchMode.externalApplication);
       } else {
         commonLaunchUrl('tel:$url', launchMode: LaunchMode.externalApplication);
       }
@@ -397,7 +445,8 @@ class Constant {
   }
 
   static double amountBeforeTax(BookingModel bookingModel) {
-    return (double.parse(bookingModel.subTotal ?? '0.0') - double.parse((bookingModel.discount ?? '0.0').toString()));
+    return (double.parse(bookingModel.subTotal ?? '0.0') -
+        double.parse((bookingModel.discount ?? '0.0').toString()));
   }
 
   static double calculateFinalAmount(BookingModel bookingModel) {
@@ -405,11 +454,16 @@ class Constant {
     for (var element in (bookingModel.taxList ?? [])) {
       taxAmount.value = (double.parse(taxAmount.value) +
               Constant.calculateTax(
-                  amount: ((double.parse(bookingModel.subTotal ?? '0.0')) - double.parse((bookingModel.discount ?? '0.0').toString())).toString(),
+                  amount: ((double.parse(bookingModel.subTotal ?? '0.0')) -
+                          double.parse(
+                              (bookingModel.discount ?? '0.0').toString()))
+                      .toString(),
                   taxModel: element))
           .toStringAsFixed(Constant.currencyModel!.decimalDigits!);
     }
-    return (double.parse(bookingModel.subTotal ?? '0.0') - double.parse((bookingModel.discount ?? '0.0').toString())) + double.parse(taxAmount.value);
+    return (double.parse(bookingModel.subTotal ?? '0.0') -
+            double.parse((bookingModel.discount ?? '0.0').toString())) +
+        double.parse(taxAmount.value);
   }
 
   static double calculateInterCityFinalAmount(IntercityModel interCityModel) {
@@ -417,11 +471,15 @@ class Constant {
     for (var element in (interCityModel.taxList ?? [])) {
       taxAmount.value = (double.parse(taxAmount.value) +
               Constant.calculateTax(
-                  amount: ((double.parse(interCityModel.subTotal ?? '0.0')) - double.parse((interCityModel.discount ?? '0.0').toString())).toString(),
+                  amount: ((double.parse(interCityModel.subTotal ?? '0.0')) -
+                          double.parse(
+                              (interCityModel.discount ?? '0.0').toString()))
+                      .toString(),
                   taxModel: element))
           .toStringAsFixed(Constant.currencyModel!.decimalDigits!);
     }
-    return (double.parse(interCityModel.subTotal ?? '0.0') - double.parse((interCityModel.discount ?? '0.0').toString())) +
+    return (double.parse(interCityModel.subTotal ?? '0.0') -
+            double.parse((interCityModel.discount ?? '0.0').toString())) +
         double.parse(taxAmount.value);
   }
 
@@ -430,23 +488,33 @@ class Constant {
     for (var element in (parcelModel.taxList ?? [])) {
       taxAmount.value = (double.parse(taxAmount.value) +
               Constant.calculateTax(
-                  amount: ((double.parse(parcelModel.subTotal ?? '0.0')) - double.parse((parcelModel.discount ?? '0.0').toString())).toString(),
+                  amount: ((double.parse(parcelModel.subTotal ?? '0.0')) -
+                          double.parse(
+                              (parcelModel.discount ?? '0.0').toString()))
+                      .toString(),
                   taxModel: element))
           .toStringAsFixed(Constant.currencyModel!.decimalDigits!);
     }
-    return (double.parse(parcelModel.subTotal ?? '0.0') - double.parse((parcelModel.discount ?? '0.0').toString())) + double.parse(taxAmount.value);
+    return (double.parse(parcelModel.subTotal ?? '0.0') -
+            double.parse((parcelModel.discount ?? '0.0').toString())) +
+        double.parse(taxAmount.value);
   }
 
   Future<Uint8List> getBytesFromAsset(String path, int width) async {
     ByteData data = await rootBundle.load(path);
-    ui.Codec codec = await ui.instantiateImageCodec(data.buffer.asUint8List(), targetWidth: width);
+    ui.Codec codec = await ui.instantiateImageCodec(data.buffer.asUint8List(),
+        targetWidth: width);
     ui.FrameInfo fi = await codec.getNextFrame();
-    return (await fi.image.toByteData(format: ui.ImageByteFormat.png))!.buffer.asUint8List();
+    return (await fi.image.toByteData(format: ui.ImageByteFormat.png))!
+        .buffer
+        .asUint8List();
   }
 
-  static Future<MapModel?> getDurationDistance(LatLng departureLatLong, LatLng destinationLatLong) async {
+  static Future<MapModel?> getDurationDistance(
+      LatLng departureLatLong, LatLng destinationLatLong) async {
     String url = 'https://maps.googleapis.com/maps/api/distancematrix/json';
-    http.Response distanceData = await http.get(Uri.parse('$url?units=metric&origins=${departureLatLong.latitude},'
+    http.Response distanceData = await http.get(Uri.parse(
+        '$url?units=metric&origins=${departureLatLong.latitude},'
         '${departureLatLong.longitude}&destinations=${destinationLatLong.latitude},${destinationLatLong.longitude}&key=${Constant.mapAPIKey}'));
 
     log(departureLatLong.toJson().toString());
@@ -454,7 +522,8 @@ class Constant {
     log(distanceData.body.toString());
     MapModel mapModel = MapModel.fromJson(jsonDecode(distanceData.body));
 
-    if (mapModel.status == 'OK' && mapModel.rows!.first.elements!.first.status == "OK") {
+    if (mapModel.status == 'OK' &&
+        mapModel.rows!.first.elements!.first.status == "OK") {
       return mapModel;
     } else {
       ShowToastDialog.showToast(mapModel.errorMessage);
@@ -463,14 +532,16 @@ class Constant {
   }
 
   static Future<LatLng?> getLatLongFromPlaceId(String placeId) async {
-    String url = 'https://maps.googleapis.com/maps/api/place/details/json?placeid=$placeId&key=${Constant.mapAPIKey}';
+    String url =
+        'https://maps.googleapis.com/maps/api/place/details/json?placeid=$placeId&key=${Constant.mapAPIKey}';
 
     http.Response latLongData = await http.get(Uri.parse(url));
     log(latLongData.body.toString());
     Map<String, dynamic> responseData = json.decode(latLongData.body);
 
     if (responseData["status"] == 'OK') {
-      return LatLng(responseData["result"]['geometry']['location']['lat'], responseData["result"]['geometry']['location']['lng']);
+      return LatLng(responseData["result"]['geometry']['location']['lat'],
+          responseData["result"]['geometry']['location']['lng']);
     } else {
       ShowToastDialog.showToast(responseData["error_message"]);
     }
@@ -537,13 +608,16 @@ class Constant {
     return DateFormat.jm().format(dateTime);
   }
 
-  static double calculateAdminCommission({String? amount, AdminCommission? adminCommission}) {
+  static double calculateAdminCommission(
+      {String? amount, AdminCommission? adminCommission}) {
     double taxAmount = 0.0;
     if (adminCommission != null && adminCommission.active == true) {
       if ((adminCommission.isFix ?? false)) {
         taxAmount = double.parse(adminCommission.value.toString());
       } else {
-        taxAmount = (double.parse(amount.toString()) * double.parse(adminCommission.value!.toString())) / 100;
+        taxAmount = (double.parse(amount.toString()) *
+                double.parse(adminCommission.value!.toString())) /
+            100;
       }
     }
     return taxAmount;

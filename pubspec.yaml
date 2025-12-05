@@ -74,6 +74,7 @@ dependencies:
   dotted_border: ^3.1.0
   fluttertoast: ^8.2.12
   flutter_launcher_icons: ^0.14.4
+  geolocator: ^14.0.2
 
 dependency_overrides:
   web: ^1.1.1

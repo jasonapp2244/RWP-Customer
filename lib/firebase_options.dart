@@ -50,22 +50,22 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAnXU1RMJrc2WodsRxc0tj7DqFv_vNtL4I',
-    appId: '1:339672413407:android:568d74fb957429a436e56a',
+    apiKey: 'AIzaSyAHt8CtCpNB2NFX59tq-ZNkYoIzKfDMec8',
+    appId: '1:339672413407:android:75dba567af3f1b6c36e56a',
     messagingSenderId: '339672413407',
     projectId: 'ride-with-purpose',
     storageBucket: 'ride-with-purpose.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'YOUR_IOS_API_KEY',
-    appId: 'YOUR_IOS_APP_ID',
-    messagingSenderId: 'YOUR_IOS_MESSAGING_SENDER_ID',
-    projectId: 'YOUR_IOS_PROJECT_ID',
-    databaseURL: 'YOUR_IOS_DATABASE_URL',
-    storageBucket: 'YOUR_IOS_STORAGE_BUCKET',
-    androidClientId: 'YOUR_ANDROID_CLIENT_ID',
-    iosClientId: 'YOUR_IOS_CLIENT_ID',
-    iosBundleId: 'YOUR_IOS_BUNDLE_ID',
+    apiKey: 'AIzaSyCyX916fmuOLz5a6ZP78omaNylkNv67Gh4',
+    appId: '1:339672413407:ios:d90be4dc22a9f05536e56a',
+    messagingSenderId: '339672413407',
+    projectId: 'ride-with-purpose',
+    storageBucket: 'ride-with-purpose.firebasestorage.app',
+    androidClientId: '339672413407-6vuuh10i3f2to5gsi84cevu66ml0kjts.apps.googleusercontent.com',
+    iosClientId: '339672413407-8mb421e0sfnig8qmep79g7u0nn1nno6i.apps.googleusercontent.com',
+    iosBundleId: 'com.appscrub.rwpcustomer',
   );
+
 }

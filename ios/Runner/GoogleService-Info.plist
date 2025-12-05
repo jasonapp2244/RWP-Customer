@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>339672413407-979h1qr6c6i62qaaalmq0omcugg3eue9.apps.googleusercontent.com</string>
+	<string>339672413407-8mb421e0sfnig8qmep79g7u0nn1nno6i.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.339672413407-979h1qr6c6i62qaaalmq0omcugg3eue9</string>
+	<string>com.googleusercontent.apps.339672413407-8mb421e0sfnig8qmep79g7u0nn1nno6i</string>
 	<key>ANDROID_CLIENT_ID</key>
 	<string>339672413407-6vuuh10i3f2to5gsi84cevu66ml0kjts.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
@@ -15,7 +15,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.mydriver.customer</string>
+	<string>com.appscrub.rwpcustomer</string>
 	<key>PROJECT_ID</key>
 	<string>ride-with-purpose</string>
 	<key>STORAGE_BUCKET</key>
@@ -31,6 +31,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:339672413407:ios:0f3b54dad1b6082036e56a</string>
+	<string>1:339672413407:ios:d90be4dc22a9f05536e56a</string>
 </dict>
 </plist>

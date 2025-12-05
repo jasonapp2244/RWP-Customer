@@ -19,7 +19,6 @@ import 'app/routes/app_pages.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
   // Initialize Firebase safely
   try {
     if (Firebase.apps.isEmpty) {
@@ -28,7 +27,6 @@ Future<void> main() async {
   } catch (e) {
     print('Error initializing Firebase: $e');
   }
-
   configLoading();
 
   runApp(const MyApp());
