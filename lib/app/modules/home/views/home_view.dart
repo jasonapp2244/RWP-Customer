@@ -52,7 +52,7 @@ class HomeView extends StatelessWidget {
                     SvgPicture.asset("assets/icon/logo_only.svg"),
                     const SizedBox(width: 10),
                     Text(
-                      'MyTaxi'.tr,
+                      'RWP'.tr,
                       style: GoogleFonts.inter(
                         color: themeChange.isDarkTheme() ? AppThemData.white : AppThemData.black,
                         fontSize: 20,

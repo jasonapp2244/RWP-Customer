@@ -26,7 +26,7 @@ const Map<String, String> hiIN = {
   "Please Select": "कृपया चयन करें",
   "Camera": "कैमरा",
   "Gallery": "गैलरी",
-  "MyTaxi": "मेरीटैक्सी",
+  "RWP": "मेरीटैक्सी",
   "Where to?": "कहाँ जाना है?",
   "Ongoing Ride": "चालू सवारी",
   "No Ongoing Ride available.": "कोई चालू सवारी उपलब्ध नहीं है।",
@@ -34,14 +34,14 @@ const Map<String, String> hiIN = {
   "Payment is Pending": "भुगतान लंबित है",
   "Book Now": "अभी बुक करें",
   "Skip": "छोड़ें",
-  "Welcome to MyTaxi": "मेरीटैक्सी में आपका स्वागत है",
+  "Welcome to RWP": "मेरीटैक्सी में आपका स्वागत है",
   "Your reliable partner for swift and convenient rides. Experience hassle-free transportation at your fingertips.":
       "स्विफ्ट और सुविधाजनक सवारी के लिए आपका विश्वसनीय साथी। अपनी उंगलियों पर परेशानी मुक्त परिवहन का अनुभव करें।",
   "Fast and Reliable": "तेज और विश्वसनीय",
-  "MyTaxi ensures prompt and reliable rides, getting you to your destination with speed and efficiency.":
+  "RWP ensures prompt and reliable rides, getting you to your destination with speed and efficiency.":
       "मेरीटैक्सी समय पर और विश्वसनीय सवारी सुनिश्चित करती है, आपको तेजी और कुशलता से आपके गंतव्य तक पहुंचाती है।",
   "Seamless User Experience": "सहज उपयोगकर्ता अनुभव",
-  "Enjoy a user-friendly interface, easy bookings, and secure payments with MyTaxi. Your journey, your way.":
+  "Enjoy a user-friendly interface, easy bookings, and secure payments with RWP. Your journey, your way.":
       "मेरीटैक्सी के साथ उपयोगकर्ता-अनुकूल इंटरफ़ेस, आसान बुकिंग और सुरक्षित भुगतान का आनंद लें। आपकी यात्रा, आपके तरीके।",
   "Get Started": "शुरू करें",
   "Language": "भाषा",
@@ -110,7 +110,7 @@ const Map<String, String> hiIN = {
   "Cancelled": "रद्द",
   "Pickup Point": "पिकअप पॉइंट",
   "No Rides Found": "कोई सवारी नहीं मिली",
-  "Your ride history is currently empty. Start your journey with MyTaxi by booking your first ride now!":
+  "Your ride history is currently empty. Start your journey with RWP by booking your first ride now!":
       "आपका सवारी इतिहास वर्तमान में खाली है। अभी अपनी पहली सवारी के साथ मेरीटैक्सी के साथ अपनी यात्रा शुरू करें!",
   "Dropout Point": "ड्रॉपआउट पॉइंट",
   "Services": "सेवाएं",

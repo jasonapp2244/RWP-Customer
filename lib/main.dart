@@ -95,7 +95,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
               }
             },
             child: GetMaterialApp(
-              title: 'MyTaxi'.tr,
+              title: 'RWP'.tr,
               debugShowCheckedModeBanner: false,
               theme: Styles.themeData(
                   themeChangeProvider.darkTheme == 0

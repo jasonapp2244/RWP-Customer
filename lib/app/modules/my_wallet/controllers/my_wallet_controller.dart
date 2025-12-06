@@ -78,7 +78,7 @@ class MyWalletController extends GetxController {
       if (paymentModel.value.strip!.isActive == true) {
         Stripe.publishableKey =
             paymentModel.value.strip!.clientPublishableKey.toString();
-        Stripe.merchantIdentifier = 'MyTaxi';
+        Stripe.merchantIdentifier = 'MRWP';
         Stripe.instance.applySettings();
       }
       if (paymentModel.value.flutterWave!.isActive == true) {
@@ -179,7 +179,7 @@ class MyWalletController extends GetxController {
                       primary: AppThemData.primary500,
                     ),
                   ),
-                  merchantDisplayName: 'MyTaxi'));
+                  merchantDisplayName: 'MRWP'));
           displayStripePaymentSheet(
               amount: amount,
               client_secret: paymentIntentData['client_secret']);

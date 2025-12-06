@@ -100,7 +100,7 @@ class ParcelRideDetailsController extends GetxController {
         if (paymentModel.value.strip!.isActive == true) {
           Stripe.publishableKey =
               paymentModel.value.strip!.clientPublishableKey.toString();
-          Stripe.merchantIdentifier = 'MyTaxi';
+          Stripe.merchantIdentifier = 'MRWP';
           Stripe.instance.applySettings();
         }
         if (paymentModel.value.paypal!.isActive == true) {
@@ -299,7 +299,7 @@ class ParcelRideDetailsController extends GetxController {
                       primary: AppThemData.primary500,
                     ),
                   ),
-                  merchantDisplayName: 'MyTaxi'));
+                  merchantDisplayName: 'MRWP'));
           displayStripePaymentSheet(
               amount: finalAmount.toString(),
               client_secret: paymentIntentData['client_secret']);

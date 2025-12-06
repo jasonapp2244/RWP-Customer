@@ -26,7 +26,7 @@ const Map<String, String> lnAr = {
   "Please Select": "يرجى التحديد",
   "Camera": "كاميرا",
   "Gallery": "معرض الصور",
-  "MyTaxi": "تاكسي بلدي",
+  "RWP": "تاكسي بلدي",
   "Where to?": "إلى أين؟",
   "Ongoing Ride": "الرحلة الجارية",
   "No Ongoing Ride available.": "لا توجد رحلة جارية.",
@@ -34,14 +34,14 @@ const Map<String, String> lnAr = {
   "Payment is Pending": "الدفع معلق",
   "Book Now": "احجز الآن",
   "Skip": "تخطي",
-  "Welcome to MyTaxi": "مرحبا بكم في ماي تاكسي",
+  "Welcome to RWP": "مرحبا بكم في ماي تاكسي",
   "Your reliable partner for swift and convenient rides. Experience hassle-free transportation at your fingertips.":
       "شريكك الموثوق به لرحلات سريعة ومريحة. استمتع بالنقل بدون متاعب بنقرة واحدة.",
   "Fast and Reliable": "سريع وموثوق",
-  "MyTaxi ensures prompt and reliable rides, getting you to your destination with speed and efficiency.":
+  "RWP ensures prompt and reliable rides, getting you to your destination with speed and efficiency.":
       "تضمن تاكسي بلدي رحلات سريعة وموثوقة، وتوصلك إلى وجهتك بسرعة وكفاءة.",
   "Seamless User Experience": "تجربة مستخدم سلسة",
-  "Enjoy a user-friendly interface, easy bookings, and secure payments with MyTaxi. Your journey, your way.":
+  "Enjoy a user-friendly interface, easy bookings, and secure payments with RWP. Your journey, your way.":
       "استمتع بواجهة سهلة الاستخدام وحجوزات سهلة ومدفوعات آمنة مع تاكسي بلدي. رحلتك، طريقك.",
   "Get Started": "ابدأ",
   "Language": "اللغة",
@@ -112,7 +112,7 @@ const Map<String, String> lnAr = {
   "Cancelled": "تم الإلغاء",
   "Pickup Point": "نقطة الاستلام",
   "No Rides Found": "لم يتم العثور على رحلات",
-  "Your ride history is currently empty. Start your journey with MyTaxi by booking your first ride now!":
+  "Your ride history is currently empty. Start your journey with RWP by booking your first ride now!":
       "سجل رحلتك فارغ حاليًا. ابدأ رحلتك مع تاكسي بلدي بحجز رحلتك الأولى الآن!",
   "Dropout Point": "نقطة الوصول",
   "Services": "الخدمات",

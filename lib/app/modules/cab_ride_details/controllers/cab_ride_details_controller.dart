@@ -92,7 +92,7 @@ class CabRideDetailsController extends GetxController {
         if (paymentModel.value.strip!.isActive == true) {
           Stripe.publishableKey =
               paymentModel.value.strip!.clientPublishableKey.toString();
-          Stripe.merchantIdentifier = 'MyTaxi';
+          Stripe.merchantIdentifier = 'RWP';
           Stripe.instance.applySettings();
         }
         if (paymentModel.value.paypal!.isActive == true) {
@@ -297,7 +297,7 @@ class CabRideDetailsController extends GetxController {
                       primary: AppThemData.primary500,
                     ),
                   ),
-                  merchantDisplayName: 'MyTaxi'));
+                  merchantDisplayName: 'RWP'));
           displayStripePaymentSheet(amount: finalAmount.toString());
         }
       } catch (e, s) {

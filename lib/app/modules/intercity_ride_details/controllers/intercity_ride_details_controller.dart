@@ -77,7 +77,7 @@ class InterCityRideDetailsController extends GetxController {
         paymentModel.value = value;
         if (paymentModel.value.strip!.isActive == true) {
           Stripe.publishableKey = paymentModel.value.strip!.clientPublishableKey.toString();
-          Stripe.merchantIdentifier = 'MyTaxi';
+          Stripe.merchantIdentifier = 'MRWP';
           Stripe.instance.applySettings();
         }
         if (paymentModel.value.paypal!.isActive == true) {
@@ -274,7 +274,7 @@ class InterCityRideDetailsController extends GetxController {
                       primary: AppThemData.primary500,
                     ),
                   ),
-                  merchantDisplayName: 'MyTaxi'));
+                  merchantDisplayName: 'MRWP'));
           displayStripePaymentSheet(amount: finalAmount.toString(), client_secret: paymentIntentData['client_secret']);
         }
       } catch (e, s) {
