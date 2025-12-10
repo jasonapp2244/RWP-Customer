@@ -53,7 +53,7 @@ class LoginController extends GetxController {
         },
         codeSent: (String verificationId, int? resendToken) {
           ShowToastDialog.closeLoader();
-          Get.to(const VerifyOtpView(), arguments: {
+          Get.to(() =>const VerifyOtpView(), arguments: {
             "countryCode": countryCodeController.value.text,
             "phoneNumber": phoneNumberController.value.text,
             "verificationId": verificationId,
@@ -154,7 +154,7 @@ class LoginController extends GetxController {
           userModel.loginType = Constant.googleLoginType;
 
           ShowToastDialog.closeLoader();
-          Get.to(const SignupView(), arguments: {
+          Get.to(() =>const SignupView(), arguments: {
             "userModel": userModel,
           });
         } else {
@@ -178,7 +178,7 @@ class LoginController extends GetxController {
               userModel.profilePic = value.user!.photoURL;
               userModel.loginType = Constant.googleLoginType;
 
-              Get.to(const SignupView(), arguments: {
+              Get.to(() =>const SignupView(), arguments: {
                 "userModel": userModel,
               });
             }
@@ -201,7 +201,7 @@ class LoginController extends GetxController {
           userModel.loginType = Constant.appleLoginType;
 
           ShowToastDialog.closeLoader();
-          Get.to(const SignupView(), arguments: {
+          Get.to(() =>const SignupView(), arguments: {
             "userModel": userModel,
           });
         } else {
@@ -225,7 +225,7 @@ class LoginController extends GetxController {
               userModel.profilePic = value.user!.photoURL;
               userModel.loginType = Constant.googleLoginType;
 
-              Get.to(const SignupView(), arguments: {
+              Get.to(() =>const SignupView(), arguments: {
                 "userModel": userModel,
               });
             }

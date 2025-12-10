@@ -170,7 +170,7 @@ class SelectVehicleTypeBottomSheet extends StatelessWidget {
                                   InkWell(
                                     onTap: () {
                                       log('=================> selected index ${controller.selectVehicleTypeIndex.value}');
-                                      Get.to(PaymentMethodView(
+                                      Get.to(() =>PaymentMethodView(
                                         index: controller.selectVehicleTypeIndex.value,
                                       ));
                                     },

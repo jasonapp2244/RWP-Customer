@@ -39,10 +39,10 @@ void configLoading() {
     ..loadingStyle = EasyLoadingStyle.custom
     ..indicatorSize = 45.0
     ..radius = 10.0
-    ..progressColor = const Color(0xFFFEA735)
+    ..progressColor = const Color(0xFF1C354B)
     ..backgroundColor = const Color(0xFFf5f6f6)
-    ..indicatorColor = const Color(0xFFFEA735)
-    ..textColor = const Color(0xFFFEA735)
+    ..indicatorColor = const Color(0xFF1C354B)
+    ..textColor = const Color(0xFF1C354B)
     ..maskColor = const Color(0xFFf5f6f6)
     ..userInteractions = true
     ..dismissOnTap = false;

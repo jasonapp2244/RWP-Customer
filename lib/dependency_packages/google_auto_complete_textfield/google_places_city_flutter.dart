@@ -69,7 +69,7 @@ class _GooglePlaceAutoCompleteTextFieldState
   bool isCrossBtn = true;
   late var _dio;
 
-  CancelToken? _cancelToken = CancelToken();
+  final CancelToken? _cancelToken = CancelToken();
 
   @override
   Widget build(BuildContext context) {

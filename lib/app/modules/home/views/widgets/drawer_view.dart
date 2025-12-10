@@ -44,7 +44,7 @@ class DrawerView extends StatelessWidget {
                         child: InkWell(
                           onTap: () async {
                             Get.back();
-                            bool? isSave = await Get.to(const EditProfileView());
+                            bool? isSave = await Get.to(() =>const EditProfileView());
                             if ((isSave ?? false)) {
                               log("===> ");
                               controller.getUserData();

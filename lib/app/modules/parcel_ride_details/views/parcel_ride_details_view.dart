@@ -149,7 +149,7 @@ class ParcelRideDetailsView extends GetView<ParcelRideDetailsController> {
                                     buttonColor: AppThemData.danger_500p,
                                     buttonTextColor: AppThemData.white,
                                     onTap: () {
-                                      Get.to(const ParcelReasonForCancelView(), arguments: {"parcelModel": controller.parcelModel.value});
+                                      Get.to(() =>const ParcelReasonForCancelView(), arguments: {"parcelModel": controller.parcelModel.value});
                                     },
                                     size: Size(0, 52),
                                   ),
@@ -264,7 +264,7 @@ class ParcelRideDetailsView extends GetView<ParcelRideDetailsController> {
                               buttonTextColor: AppThemData.black,
                               onTap: () {
                                 // Get.to(const ReviewScreenView(), arguments: {"bookingModel": controller.interCityModel});
-                                Get.to(
+                                Get.to(() =>
                                   const ReviewScreenView(),
                                   arguments: {
                                     "bookingModel": controller.parcelModel.value,
@@ -1052,7 +1052,7 @@ class ParcelRideDetailsView extends GetView<ParcelRideDetailsController> {
                                                   ),
                                                   InkWell(
                                                       onTap: () {
-                                                        Get.to(ChatScreenView(
+                                                        Get.to(() =>ChatScreenView(
                                                           receiverId: driverUserModel.id ?? '',
                                                         ));
                                                       },

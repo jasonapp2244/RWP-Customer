@@ -51,92 +51,20 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:339672413407:android:cc3483f2bd66a43136e56a",
+        "mobilesdk_app_id": "1:339672413407:android:cd2c0721c32cb66236e56a",
         "android_client_info": {
-          "package_name": "com.appscrub.rwpuser"
+          "package_name": "com.appscrub.rwpdriver"
         }
       },
       "oauth_client": [
         {
-          "client_id": "339672413407-7vodpc6c1jv7kj7qfhkf435v5b94na48.apps.googleusercontent.com",
+          "client_id": "339672413407-mr261hfd456jn420r71698rt6i492n7j.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.appscrub.rwpuser",
+            "package_name": "com.appscrub.rwpdriver",
             "certificate_hash": "84baa804c01e16d76e5480f218b638575f978cdd"
           }
         },
-        {
-          "client_id": "339672413407-j93ng3peo3spvrlfa34qkld4r0aqn8la.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAHt8CtCpNB2NFX59tq-ZNkYoIzKfDMec8"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "339672413407-j93ng3peo3spvrlfa34qkld4r0aqn8la.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "339672413407-8mb421e0sfnig8qmep79g7u0nn1nno6i.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.appscrub.rwpcustomer"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:339672413407:android:568d74fb957429a436e56a",
-        "android_client_info": {
-          "package_name": "com.appscrub.rwpcustomer"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "339672413407-j93ng3peo3spvrlfa34qkld4r0aqn8la.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAHt8CtCpNB2NFX59tq-ZNkYoIzKfDMec8"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "339672413407-j93ng3peo3spvrlfa34qkld4r0aqn8la.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "339672413407-8mb421e0sfnig8qmep79g7u0nn1nno6i.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.appscrub.rwpcustomer"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:339672413407:android:244a9cd9f67e036236e56a",
-        "android_client_info": {
-          "package_name": "com.craftech.rwpdriver"
-        }
-      },
-      "oauth_client": [
         {
           "client_id": "339672413407-j93ng3peo3spvrlfa34qkld4r0aqn8la.apps.googleusercontent.com",
           "client_type": 3

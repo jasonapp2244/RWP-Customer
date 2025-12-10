@@ -57,7 +57,7 @@ class Constant {
       "https://firebasestorage.googleapis.com/v0/b/mytaxi-a8627.appspot.com/o/constant_assets%2F59.png?alt=media&token=a0b1aebd-9c01-45f6-9569-240c4bc08e23";
   // User and app state
   static UserModel? userModel;
-  static String mapAPIKey = "AIzaSyC7XE19210GGsrYz25coeKXrrtU2Vkthcc";
+  static String mapAPIKey = "AIzaSyBYDKJ5fDp5uvzG7K9pqhtqP7DRoUmnOv8";
   static String senderId = "";
   static String jsonFileURL = "";
   static String radius = "10";

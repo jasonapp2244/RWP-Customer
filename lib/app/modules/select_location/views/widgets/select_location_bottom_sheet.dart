@@ -89,7 +89,7 @@ class SelectLocationBottomSheet extends StatelessWidget {
 
                           // Request focus before navigating (to ensure it's tracked)
                           tappedFocusNode.requestFocus();
-                          Get.to(LocationPickerScreen())!.then(
+                          Get.to(() =>LocationPickerScreen())!.then(
                             (value) {
                               if (value != null) {
                                 SelectedLocationModel selectedLocationModel = value;

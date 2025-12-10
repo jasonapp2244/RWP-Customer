@@ -130,7 +130,7 @@ class PaymentMethodView extends StatelessWidget {
                       ),
                     ),
                     InkWell(
-                      onTap: () async => await Get.to(const CouponScreenView()),
+                      onTap: () async => await Get.to(() =>const CouponScreenView()),
                       child: Padding(
                         padding: const EdgeInsets.fromLTRB(0, 20, 0, 8),
                         child: Row(
@@ -152,7 +152,7 @@ class PaymentMethodView extends StatelessWidget {
                     ),
                     InkWell(
                       onTap: () async {
-                        await Get.to(const CouponScreenView());
+                        await Get.to(() =>const CouponScreenView());
                         // if (result != null && result == true) {
                         //   log("result $result");
                         //   controller.couponCode.value = "WEEKEND50";

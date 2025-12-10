@@ -219,7 +219,7 @@ class FindingDriverBottomSheet extends StatelessWidget {
                                         buttonColor: AppThemData.danger500,
                                         buttonTextColor: AppThemData.white,
                                         onTap: () {
-                                          Get.to(const ReasonForCancelView(), arguments: {"bookingModel": controller.bookingModel.value});
+                                          Get.to(() =>const ReasonForCancelView(), arguments: {"bookingModel": controller.bookingModel.value});
                                         }),
                                   ],
                                 )

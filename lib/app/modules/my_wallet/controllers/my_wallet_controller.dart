@@ -427,7 +427,7 @@ class MyWalletController extends GetxController {
     if (response.statusCode == 200) {
       final data = jsonDecode(response.body);
       ShowToastDialog.closeLoader();
-      await Get.to(FlutterWaveScreen(initialURl: data['data']['link']))!
+      await Get.to(() =>FlutterWaveScreen(initialURl: data['data']['link']))!
           .then((value) {
         if (value != null && value is Map<String, dynamic>) {
           if (value["status"] == true) {
@@ -500,7 +500,7 @@ class MyWalletController extends GetxController {
         .then((value) async {
       if (value != null) {
         PayStackUrlModel payStackModel = value;
-        Get.to(PayStackScreen(
+        Get.to(() =>PayStackScreen(
           secretKey: paymentModel.value.payStack!.payStackSecret.toString(),
           callBackUrl: Constant.paymentCallbackURL.toString(),
           initialURl: payStackModel.data.authorizationUrl,
@@ -538,7 +538,7 @@ class MyWalletController extends GetxController {
             var preferenceId = result['response']['id'];
             log(preferenceId);
 
-            Get.to(MercadoPagoScreen(
+            Get.to(() =>MercadoPagoScreen(
                     initialURl: result['response']['init_point']))!
                 .then((value) {
               log(value);
@@ -594,7 +594,7 @@ class MyWalletController extends GetxController {
             amount: amount.toString(),
             userModel: userModel.value)
         .then((String? value) async {
-      bool isDone = await Get.to(PayFastScreen(
+      bool isDone = await Get.to(() =>PayFastScreen(
           htmlData: value!, payFastSettingData: paymentModel.value.payFast!));
       if (isDone) {
         Get.back();

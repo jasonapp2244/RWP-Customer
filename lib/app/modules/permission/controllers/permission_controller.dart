@@ -40,13 +40,13 @@ class PermissionController extends GetxController {
         if (Platform.isAndroid) {
           location.enableBackgroundMode(enable: true).then((value) {
             if (value) {
-              Get.to(const HomeView());
+              Get.to(() =>const HomeView());
             } else {
               ShowToastDialog.showToast("Please enable background mode");
             }
           });
         } else {
-          Get.to(const HomeView());
+          Get.to(() =>const HomeView());
         }
       } else {
         ShowToastDialog.showToast("Background location permission denied. Please allow access for all the time.");

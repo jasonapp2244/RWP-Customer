@@ -67,7 +67,7 @@ class CabRideView extends StatelessWidget {
                               NoRidesView(
                                 themeChange: themeChange,
                                 onTap: () {
-                                  Get.to(const SelectLocationView());
+                                  Get.to(() =>const SelectLocationView());
                                 },
                               )
                             ],
@@ -116,7 +116,7 @@ class CabRideView extends StatelessWidget {
     final RxBool isOpen = false.obs;
     return InkWell(
       onTap: () {
-        Get.to(const CabRideDetailsView(), arguments: {"bookingModel": bookingModel});
+        Get.to(() =>const CabRideDetailsView(), arguments: {"bookingModel": bookingModel});
       },
       child: Container(
         width: Responsive.width(100, context),

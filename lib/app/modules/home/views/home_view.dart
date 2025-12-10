@@ -65,7 +65,7 @@ class HomeView extends StatelessWidget {
                 actions: [
                   IconButton(
                       onPressed: () {
-                        Get.to(const NotificationView());
+                        Get.to(() =>const NotificationView());
                       },
                       icon: const Icon(Icons.notifications_none_rounded))
                 ],
@@ -131,7 +131,7 @@ class HomeScreenView extends StatelessWidget {
                                   );
                                 });
                           } else {
-                            Get.to(const SelectLocationView());
+                            Get.to(() =>const SelectLocationView());
                           }
                         },
                         child: Container(
@@ -207,7 +207,7 @@ class HomeScreenView extends StatelessWidget {
                                           );
                                         });
                                   } else {
-                                    Get.to(const SelectLocationView());
+                                    Get.to(() =>const SelectLocationView());
                                   }
                                 },
                               ),
@@ -220,7 +220,7 @@ class HomeScreenView extends StatelessWidget {
                                   title: "Intercity".tr,
                                   gifPath: "assets/icon/gif_intercity.gif",
                                   onClick: () {
-                                    Get.to(const StartIntercityView());
+                                    Get.to(() =>const StartIntercityView());
                                   },
                                 ),
                               ),
@@ -235,7 +235,7 @@ class HomeScreenView extends StatelessWidget {
                                   title: "Parcel".tr,
                                   gifPath: "assets/icon/gif_parcel.gif",
                                   onClick: () {
-                                    Get.to(const BookParcelView());
+                                    Get.to(() =>const BookParcelView());
                                   },
                                 ),
                               ),
@@ -258,7 +258,7 @@ class HomeScreenView extends StatelessWidget {
                             themeChange: themeChange,
                             height: Responsive.height(40, context),
                             onTap: () {
-                              Get.to(const SelectLocationView());
+                              Get.to(() =>const SelectLocationView());
                             },
                           )
                         : ListView.builder(
@@ -273,7 +273,7 @@ class HomeScreenView extends StatelessWidget {
                                 children: [
                                   InkWell(
                                     onTap: () {
-                                      Get.to(const CabRideDetailsView(), arguments: {"bookingModel": controller.bookingList[index]});
+                                      Get.to(() =>const CabRideDetailsView(), arguments: {"bookingModel": controller.bookingList[index]});
                                     },
                                     child: Container(
                                       width: Responsive.width(100, context),

@@ -135,7 +135,7 @@ class InterCityRideDetailsView extends GetView<InterCityRideDetailsController> {
                                     buttonColor: AppThemData.danger_500p,
                                     buttonTextColor: AppThemData.white,
                                     onTap: () {
-                                      Get.to(const InterCityReasonForCancelView(), arguments: {"interCityModel": controller.interCityModel.value});
+                                      Get.to(() =>const InterCityReasonForCancelView(), arguments: {"interCityModel": controller.interCityModel.value});
                                     },
                                     size: Size(0, 52),
                                   ),
@@ -250,7 +250,7 @@ class InterCityRideDetailsView extends GetView<InterCityRideDetailsController> {
                               buttonTextColor: AppThemData.black,
                               onTap: () {
                                 // Get.to(const ReviewScreenView(), arguments: {"bookingModel": controller.interCityModel});
-                                Get.to(
+                                Get.to(() =>
                                   const ReviewScreenView(),
                                   arguments: {
                                     "isIntercity": true,

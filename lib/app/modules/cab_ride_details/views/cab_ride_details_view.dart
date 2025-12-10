@@ -141,7 +141,7 @@ class CabRideDetailsView extends GetView<CabRideDetailsController> {
                               buttonColor: AppThemData.danger_500p,
                               buttonTextColor: AppThemData.white,
                               onTap: () {
-                                Get.to(const ReasonForCancelView(), arguments: {"bookingModel": controller.bookingModel.value});
+                                Get.to(() =>const ReasonForCancelView(), arguments: {"bookingModel": controller.bookingModel.value});
                               },
                               size: Size(0, 52),
                             ),
@@ -507,7 +507,7 @@ class CabRideDetailsView extends GetView<CabRideDetailsController> {
                                             ),
                                             InkWell(
                                                 onTap: () {
-                                                  Get.to(ChatScreenView(
+                                                  Get.to(() =>ChatScreenView(
                                                     receiverId: driverUserModel.id ?? '',
                                                   ));
                                                 },

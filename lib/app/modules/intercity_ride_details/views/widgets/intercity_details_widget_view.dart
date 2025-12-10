@@ -260,7 +260,7 @@ class InterCityDetailsView extends StatelessWidget {
                                   ),
                                   InkWell(
                                       onTap: () {
-                                        Get.to(ChatScreenView(
+                                        Get.to(() =>ChatScreenView(
                                           receiverId: driverUserModel.id ?? '',
                                         ));
                                       },

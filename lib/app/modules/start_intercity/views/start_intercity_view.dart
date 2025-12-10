@@ -137,7 +137,7 @@ class StartIntercityView extends GetView<StartIntercityController> {
                 buttonColor: AppThemData.white,
                 buttonTextColor: AppThemData.black,
                 onTap: () {
-                  Get.to(const BookIntercityView());
+                  Get.to(() =>const BookIntercityView());
                 }),
           ],
         ),

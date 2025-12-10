@@ -228,7 +228,7 @@ class ParcelRidesView extends StatelessWidget {
                                                 ParcelRideDetailsController detailsController = Get.put(ParcelRideDetailsController());
                                                 detailsController.bookingId.value = parcelModel.id ?? '';
                                                 detailsController.parcelModel.value = parcelModel;
-                                                Get.to(const ParcelRideDetailsView());
+                                                Get.to(() =>const ParcelRideDetailsView());
                                               },
                                               child: Icon(
                                                 Icons.keyboard_arrow_right_sharp,
@@ -349,7 +349,7 @@ class ParcelRidesView extends StatelessWidget {
                                                   buttonColor: AppThemData.danger_500p,
                                                   buttonTextColor: AppThemData.white,
                                                   onTap: () {
-                                                    Get.to(const ParcelReasonForCancelView(), arguments: {"parcelModel": parcelModel});
+                                                    Get.to(() =>const ParcelReasonForCancelView(), arguments: {"parcelModel": parcelModel});
                                                   },
                                                   size: Size(Responsive.width(100, context), 52),
                                                 )  : Row(
@@ -362,7 +362,7 @@ class ParcelRidesView extends StatelessWidget {
                                                               buttonColor: AppThemData.danger_500p,
                                                               buttonTextColor: AppThemData.white,
                                                               onTap: () {
-                                                                Get.to(const ParcelReasonForCancelView(), arguments: {"parcelModel": parcelModel});
+                                                                Get.to(() =>const ParcelReasonForCancelView(), arguments: {"parcelModel": parcelModel});
                                                               },
                                                               size: const Size(double.infinity, 48),
                                                             ),
@@ -377,7 +377,7 @@ class ParcelRidesView extends StatelessWidget {
                                                                 ParcelRideDetailsController detailsController = Get.put(ParcelRideDetailsController());
                                                                 detailsController.bookingId.value = parcelModel.id ?? '';
                                                                 detailsController.parcelModel.value = parcelModel;
-                                                                Get.to(const ParcelRideDetailsView());
+                                                                Get.to(() =>const ParcelRideDetailsView());
                                                               },
                                                               size: const Size(double.infinity, 48),
                                                             ),
@@ -390,7 +390,7 @@ class ParcelRidesView extends StatelessWidget {
                                                             buttonColor: AppThemData.danger_500p,
                                                             buttonTextColor: AppThemData.white,
                                                             onTap: () {
-                                                              Get.to(const ParcelReasonForCancelView(), arguments: {"parcelModel": parcelModel});
+                                                              Get.to(() =>const ParcelReasonForCancelView(), arguments: {"parcelModel": parcelModel});
                                                             },
                                                             size: Size(Responsive.width(100, context), 52),
                                                           )
@@ -409,7 +409,7 @@ class ParcelRidesView extends StatelessWidget {
                               NoRidesView(
                                 themeChange: themeChange,
                                 onTap: () {
-                                  Get.to(const BookParcelView());
+                                  Get.to(() =>const BookParcelView());
                                 },
                               )
                             ]),

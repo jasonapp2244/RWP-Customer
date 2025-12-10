@@ -532,7 +532,7 @@ class CabRideDetailsController extends GetxController {
     if (response.statusCode == 200) {
       final data = jsonDecode(response.body);
       ShowToastDialog.closeLoader();
-      await Get.to(FlutterWaveScreen(initialURl: data['data']['link']))!
+      await Get.to(() =>FlutterWaveScreen(initialURl: data['data']['link']))!
           .then((value) {
         if (value != null) {
           log(":::::::::::::::::::::::::::::::::::$value");
@@ -603,7 +603,7 @@ class CabRideDetailsController extends GetxController {
         .then((value) async {
       if (value != null) {
         PayStackUrlModel payStackModel = value;
-        Get.to(PayStackScreen(
+        Get.to(() =>PayStackScreen(
           secretKey: paymentModel.value.payStack!.payStackSecret.toString(),
           callBackUrl: Constant.paymentCallbackURL.toString(),
           initialURl: payStackModel.data.authorizationUrl,
@@ -641,7 +641,7 @@ class CabRideDetailsController extends GetxController {
             var preferenceId = result['response']['id'];
             log(preferenceId);
 
-            Get.to(MercadoPagoScreen(
+            Get.to(() =>MercadoPagoScreen(
                     initialURl: result['response']['init_point']))!
                 .then((value) {
               log(value);

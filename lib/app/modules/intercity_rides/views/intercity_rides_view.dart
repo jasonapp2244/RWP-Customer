@@ -222,7 +222,7 @@ class InterCityRidesView extends StatelessWidget {
                                               InterCityRideDetailsController detailsController = Get.put(InterCityRideDetailsController());
                                               detailsController.bookingId.value = interCityModel.id ?? '';
                                               detailsController.interCityModel.value = interCityModel;
-                                              Get.to(const InterCityRideDetailsView());
+                                              Get.to(() =>const InterCityRideDetailsView());
                                             },
                                             child: Icon(
                                               Icons.keyboard_arrow_right_sharp,
@@ -347,7 +347,7 @@ class InterCityRidesView extends StatelessWidget {
                                                     buttonColor: AppThemData.danger_500p,
                                                     buttonTextColor: AppThemData.white,
                                                     onTap: () {
-                                                      Get.to(const InterCityReasonForCancelView(), arguments: {"interCityModel": interCityModel});
+                                                      Get.to(() =>const InterCityReasonForCancelView(), arguments: {"interCityModel": interCityModel});
                                                     },
                                                     size: Size(Responsive.width(100, context), 52),
                                                   )
@@ -362,7 +362,7 @@ class InterCityRidesView extends StatelessWidget {
                                                           buttonColor: AppThemData.danger_500p,
                                                           buttonTextColor: AppThemData.white,
                                                           onTap: () {
-                                                            Get.to(const InterCityReasonForCancelView(), arguments: {"interCityModel": interCityModel});
+                                                            Get.to(() =>const InterCityReasonForCancelView(), arguments: {"interCityModel": interCityModel});
                                                           },
                                                           size: const Size(double.infinity, 48),
                                                         ),
@@ -377,7 +377,7 @@ class InterCityRidesView extends StatelessWidget {
                                                             InterCityRideDetailsController detailsController = Get.put(InterCityRideDetailsController());
                                                             detailsController.bookingId.value = interCityModel.id ?? '';
                                                             detailsController.interCityModel.value = interCityModel;
-                                                            Get.to(const InterCityRideDetailsView());
+                                                            Get.to(() =>const InterCityRideDetailsView());
                                                           },
                                                           size: const Size(double.infinity, 48),
                                                         ),
@@ -391,7 +391,7 @@ class InterCityRidesView extends StatelessWidget {
                                                     buttonColor: AppThemData.danger_500p,
                                                     buttonTextColor: AppThemData.white,
                                                     onTap: () {
-                                                      Get.to(const InterCityReasonForCancelView(), arguments: {"interCityModel": interCityModel});
+                                                      Get.to(() =>const InterCityReasonForCancelView(), arguments: {"interCityModel": interCityModel});
                                                     },
                                                     size: Size(Responsive.width(100, context), 52),
                                                   )
@@ -405,7 +405,7 @@ class InterCityRidesView extends StatelessWidget {
                                                           buttonColor: AppThemData.danger_500p,
                                                           buttonTextColor: AppThemData.white,
                                                           onTap: () {
-                                                            Get.to(const InterCityReasonForCancelView(), arguments: {"interCityModel": interCityModel});
+                                                            Get.to(() =>const InterCityReasonForCancelView(), arguments: {"interCityModel": interCityModel});
                                                           },
                                                           size: const Size(double.infinity, 48),
                                                         ),
@@ -420,7 +420,7 @@ class InterCityRidesView extends StatelessWidget {
                                                             InterCityRideDetailsController detailsController = Get.put(InterCityRideDetailsController());
                                                             detailsController.bookingId.value = interCityModel.id ?? '';
                                                             detailsController.interCityModel.value = interCityModel;
-                                                            Get.to(const InterCityRideDetailsView());
+                                                            Get.to(() =>const InterCityRideDetailsView());
                                                           },
                                                           size: const Size(double.infinity, 48),
                                                         ),
@@ -479,7 +479,7 @@ class InterCityRidesView extends StatelessWidget {
                                                           buttonColor: AppThemData.danger_500p,
                                                           buttonTextColor: AppThemData.white,
                                                           onTap: () {
-                                                            Get.to(const InterCityReasonForCancelView(), arguments: {"interCityModel": interCityModel});
+                                                            Get.to(() =>const InterCityReasonForCancelView(), arguments: {"interCityModel": interCityModel});
                                                           },
                                                           size: Size(Responsive.width(100, context), 52),
                                                         )
@@ -498,7 +498,7 @@ class InterCityRidesView extends StatelessWidget {
                             NoRidesView(
                               themeChange: themeChange,
                               onTap: () {
-                                Get.to(const StartIntercityView());
+                                Get.to(() =>const StartIntercityView());
                               },
                             )
                           ]),
